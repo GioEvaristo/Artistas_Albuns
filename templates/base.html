@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria da Gio</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/estilo.css')}}">
+</head>
+<body>
+    <header>
+        <a href="/"><img src="/static/img/pizza.webp"></a>
+        <h1>PIZZARIA DA GIO</h1>
+        <img src="/static/img/pizza.webp">
+    </header>
+        <nav>
+            <div class="links">
+                <a href="http:/usuarios">Usuários</a>
+                <a href="http:/pizzas">Pizzas</a>
+                <a href="http:/pedidos">Pedidos</a>
+            </div>
+        </nav>
+    <main>
+        {% block conteudo %}
+        {% endblock %}
+    </main>
+</body>
+<footer>
+    <h1>Todos os direitos reservados - by Giovanna</h1>
+</footer>
+</html>

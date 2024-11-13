@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Englebert&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-family: 'Englebert';
+}
+
+:root{
+    --primary: #af1d1d;
+    --secondary: #5ad3d3;
+    --gray: rgb(217, 208, 208);
+    --white: white;
+    --blue: #305ffa;
+    --green: #26932f;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    background-color: var(--primary);
+    
+}
+
+header img{
+    height: 5rem;
+}
+
+header h1{
+    font-size: 4rem;
+    color: var(--secondary);
+    margin: 0.5rem;
+    font-family: 'Mountains of Christmas';
+    text-shadow: -2px 1px black;
+    
+}
+
+h1.inicio{
+    display: flex;
+    font-size: 6rem;
+    color: var(--blue) ;
+    font-family: 'Mountains of Christmas';
+    text-shadow: 5px 3px rgb(255, 255, 255);
+    justify-content: center;
+    align-items: center;
+    padding-top: 15rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav div{
+    display: flex;
+    height: 3rem;
+    background-image: radial-gradient(var(--secondary), black);
+    justify-content: space-around;
+    align-items: center;
+    text-shadow: -1px 1px black;
+}
+
+nav div a{
+    display: flex;
+    font-size: 2.5rem;
+    text-decoration: none;
+    align-items: center;
+    margin: 2rem;
+    color: var(--gray);
+}
+
+
+main {
+    min-height: calc(100vh - 11rem);
+    background-color: var(--green);
+    background-image: url(/static/img/stevepizza.webp);
+}
+
+a, input{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    text-decoration: none;
+    color: rgb(255, 0, 0);
+}
+
+table, tr, td, th{
+    border: 3px solid var(--white);
+    border-collapse: collapse;
+    background-color: var(--secondary);
+    font-size: 2rem;
+    padding: 1rem;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+}
+
+form{
+    padding-top: 9rem;
+    border: 3px solid var(--purple);
+    border-collapse: collapse;
+    background-image: radial-gradient(#ff8ecc, rgba(0, 0, 0, 0.164) );
+    font-size: 3rem;
+    text-decoration: none;
+    padding: 1rem;
+    width: 30rem;
+    height: 27rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
+button{
+    margin-top: 1rem;
+    margin-left: 20rem;
+    height: 5rem;
+    width: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--purple);
+    color: azure;
+    cursor: pointer;
+    border: 2px solid var(--gray);
+    border-radius: 10rem;
+    font-size: 2rem;
+}
+
+input{
+    font-size: 2rem;
+    height: 3rem;
+    width: 28rem;
+    background-color: var(--primary);
+    border: 3px solid var(--purple);
+}
+
+.add{
+    padding-top: 2rem;
+    margin-bottom: 2rem;
+    text-decoration: overline;
+    color: var(--purple);
+}
+
+.message{
+    display: flex;
+    padding-top: 2rem;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary);
+    font-size: 3rem;
+    
+}
+
+.titulos{
+    color: rgb(253, 225, 255);
+}
+
+div.index{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: xx-large;
+    color: var(--secondary);
+    padding-top: 12rem;
+
+}
+
+footer{
+    font-size: 10px;
+    padding-right: 1rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    background-image: radial-gradient(var(--secondary), black);
+    justify-content: end;
+    color: var(--white);
+    
+}

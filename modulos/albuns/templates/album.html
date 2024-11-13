@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block conteudo%}
+    {% set mensagens = get_flashed_messages() %}
+    {% if mensagens %}
+        {% for msg in mensagens %}
+            <div>
+                {{msg}}
+            </div>
+        {% endfor %}
+    {% endif %}
+    <div>
+        <a href="/albuns/add">Adicionar</a>
+    </div>
+    <table>
+        <tr>
+            <th>Título</th>
+            <th>Artista</th>
+            <th>Ano de Lançamento</th>
+        </tr>
+        {% for a in albuns %}
+        <tr>
+            <td>{{a.album.titulo}}</td>
+            <td>{{a.artista.nome}}</td>
+            <td>{{p.album.ano_lancamento}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

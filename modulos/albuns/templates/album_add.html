@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block conteudo%}
+    {% set mensagens = get_flashed_messages() %}
+    {% if mensagens %}
+        {% for msg in mensagens %}
+            <div>
+                {{msg}}
+            </div>
+        {% endfor %}
+    {% endif %}
+    <form action="/albuns/save" method="post">
+        <div>
+            <label for="titulo">Título: </label>
+            <select id="titulo" name="album_id" required>
+                <option value=" "></option>
+                {% for a in albuns %}
+                    <option value="{{a.album_id}}">{{a.titulo}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div>
+            <label for="nome">Artista: </label>
+            <select id="nome" name="artista_id" required>
+                <option value=" "></option>
+                {% for a in artistas %}
+                    <option value="{{a.artista_id}}">{{a.nome}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div>
+            <label for="ano_lancamento">Ano de Lançamento: </label>
+            <input type="number" name="ano_lancamento" id="ano_lancamento" required>
+        </div>
+        <button type="submit">Salvar</button>
+    </form>
+{% endblock %}

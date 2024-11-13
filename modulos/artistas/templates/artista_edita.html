@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block conteudo%}
+    {% set mensagens = get_flashed_messages() %}
+    {% if mensagens %}
+        {% for msg in mensagens %}
+            <div>
+                {{msg}}
+            </div>
+        {% endfor %}
+    {% endif %}
+    <form action="/artistas/editasave" method="post">
+        <fieldset>
+        <input type="hidden" name="artista_id", value="{{ar.artista_id}}">
+
+        <label for="nome">Nome: </label>
+        <input type="text" name="nome" id="nome", value="{{ar.nome}}">
+
+        <label for="genero">Gênero: </label>
+        <input type="text" name="genero" id="genero", value="{{ar.genero}}">
+
+        <button type="submit">Salvar</button>
+        </fieldset>
+    </form>
+{% endblock %}
