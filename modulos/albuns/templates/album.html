@@ -17,12 +17,16 @@
             <th>Título</th>
             <th>Artista</th>
             <th>Ano de Lançamento</th>
+            <th>Editar</th>
+            <th>Remover</th>
         </tr>
         {% for a in albuns %}
         <tr>
-            <td>{{a.album.titulo}}</td>
+            <td>{{a.titulo}}</td>
             <td>{{a.artista.nome}}</td>
-            <td>{{p.album.ano_lancamento}}</td>
+            <td>{{a.ano_lancamento}}</td>
+            <td><a href="/album/edita/{{albuns.id}}">Editar</a></td>
+            <td><a href="/album/remove/{{albuns.id}}">Remover</a></td>
         </tr>
         {% endfor %}
     </table>

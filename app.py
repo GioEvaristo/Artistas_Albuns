@@ -12,10 +12,10 @@ db.init_app(app)
 migrate = Migrate(app, db)
 
 from modulos.artistas.artistas import bp_artista
-app.register_blueprint(bp_artista, url_prefix = '/artistas')
+app.register_blueprint(bp_artista, url_prefix='/artistas')
 
 from modulos.albuns.albuns import bp_album
-app.register_blueprint(bp_album, url_prefix = '/albuns')
+app.register_blueprint(bp_album, url_prefix='/albuns')
 
 @app.route('/')
 def index():

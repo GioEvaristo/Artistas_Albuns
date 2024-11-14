@@ -12,19 +12,14 @@
     <form action="/albuns/save" method="post">
         <div>
             <label for="titulo">Título: </label>
-            <select id="titulo" name="album_id" required>
-                <option value=" "></option>
-                {% for a in albuns %}
-                    <option value="{{a.album_id}}">{{a.titulo}}</option>
-                {% endfor %}
-            </select>
+            <input type="text" name="titulo" id="titulo" request>
         </div>
         <div>
             <label for="nome">Artista: </label>
-            <select id="nome" name="artista_id" required>
+            <select id="nome" name="nome" required>
                 <option value=" "></option>
                 {% for a in artistas %}
-                    <option value="{{a.artista_id}}">{{a.nome}}</option>
+                    <option value="{{a.id}}">{{a.nome}}</option>
                 {% endfor %}
             </select>
         </div>
