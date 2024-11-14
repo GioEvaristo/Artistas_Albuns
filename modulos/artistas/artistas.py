@@ -4,7 +4,7 @@ from database import db
 
 bp_artista = Blueprint('artistas', __name__, template_folder="templates")
 
-@bp_artista.route('/')
+@bp_artista.route('/artistas')
 def index():
     dados = Artistas.query.all()
     return render_template('artista.html', artistas = dados)

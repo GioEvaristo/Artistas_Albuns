@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, flash, redirect, Blueprint
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'sTrinGqUENgMSAbe'
+app.config['SECRET_KEY'] = 'SENHASEcreTA'
 conexao = "mysql+pymysql://alunos:cefetmg@127.0.0.1/GioBP"
 app.config['SQLALCHEMY_DATABASE_URI'] = conexao
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
