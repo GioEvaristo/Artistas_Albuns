@@ -12,7 +12,7 @@ def index():
 @bp_album.route('/add')
 def add():
     a = Albuns.query.all()
-    return render_template('album_add.html', albuns=a)
+    return render_template('album_add.html', albuns = a)
 
 @bp_album.route('/save', methods = ['POST'])
 def save():
@@ -46,7 +46,7 @@ def remove(id):
 def edita(id):
     album = Albuns.query.get(id)
     artista = Artistas.query.all()
-    return render_template("album_edita.html", dados=album, paciente=artista)
+    return render_template("album_edita.html", dados=album, artista=artista)
 
 @bp_album.route("/editasave", methods=['POST'])
 def editasave():

@@ -44,7 +44,7 @@ def remove(id):
 @bp_artista.route("/edita/<int:id>")
 def edita(id):
     artista = Artistas.query.get(id)
-    return render_template("artista_edita.html", dados=artista)
+    return render_template("artista_edita.html", dados = artista)
 
 @bp_artista.route("/editasave", methods=['POST'])
 def editasave():
@@ -52,9 +52,9 @@ def editasave():
     nome = request.form.get('nome')
     genero = request.form.get('genero')
     if id and nome and genero:
-        album = Artistas.query.get(id)
-        album.nome = nome
-        album.genero = genero
+        artista = Artistas.query.get(id)
+        artista.nome = nome
+        artista.genero = genero
         db.session.commit()
         flash('Dados atualizados com sucesso!')
         return redirect('/artistas')

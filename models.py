@@ -20,7 +20,7 @@ class Albuns(db.Model):
     ano_lancamento = db.Column(db.Integer)
     artista_id = db.Column(db.Integer, db.ForeignKey('artistas.id'))
 
-    artista = db.relationship('Artistas', foreign_keys=artista_id)
+    artistas = db.relationship('Artistas', foreign_keys=artista_id)
 
     def __init__(self, titulo, ano_lancamento, artista_id):
         self.titulo = titulo
@@ -28,5 +28,5 @@ class Albuns(db.Model):
         self.ano_lancamento = ano_lancamento
 
     def __repr__(self):
-        return "<Álbum: {} - {} - {}>".format(self.titulo, self.ano_lancamento, self.artista.nome)
+        return "<Álbum: {}".format(self.titulo)
         

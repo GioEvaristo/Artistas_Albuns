@@ -15,17 +15,17 @@
             <input type="text" name="titulo" id="titulo" request>
         </div>
         <div>
-            <label for="nome">Artista: </label>
-            <select id="nome" name="nome" required>
+            <label for="ano_lancamento">Ano de Lançamento: </label>
+            <input type="number" name="ano_lancamento" id="ano_lancamento" required>
+        </div>
+        <div>
+            <label for="artista_id">Artista: </label>
+            <select id="artista_id" name="artista_id" required>
                 <option value=" "></option>
-                {% for a in artistas %}
+                {% for a in artista %}
                     <option value="{{a.id}}">{{a.nome}}</option>
                 {% endfor %}
             </select>
-        </div>
-        <div>
-            <label for="ano_lancamento">Ano de Lançamento: </label>
-            <input type="number" name="ano_lancamento" id="ano_lancamento" required>
         </div>
         <button type="submit">Salvar</button>
     </form>
