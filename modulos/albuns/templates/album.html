@@ -9,8 +9,8 @@
             </div>
         {% endfor %}
     {% endif %}
-    <div>
-        <a href="/albuns/add">Adicionar</a>
+    <div class="add">
+        <a href="/albuns/add">Adicionar ✭</a>
     </div>
     <table>
         <tr>
@@ -25,8 +25,8 @@
             <td>{{a.titulo}}</td>
             <td>{{a.artista.nome}}</td>
             <td>{{a.ano_lancamento}}</td>
-            <td><a href="/album/edita/{{albuns.id}}">Editar</a></td>
-            <td><a href="/album/remove/{{albuns.id}}">Remover</a></td>
+            <td><a href="/album/edita/{{a.id}}">Editar</a></td>
+            <td><a href="/album/remove/{{a.id}}">Remover</a></td>
         </tr>
         {% endfor %}
     </table>

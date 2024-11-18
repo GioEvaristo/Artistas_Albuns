@@ -9,18 +9,22 @@
             </div>
         {% endfor %}
     {% endif %}
-    <div>
-        <a href="/artistas/add">Adicionar</a>
+    <div class="add">
+        <a href="/artistas/add">Adicionar ✭</a>
     </div>
     <table>
         <tr>
             <th>Nome</th>
             <th>Gênero</th>
+            <th>Editar</th>
+            <th>Remover</th>
         </tr>
         {% for ar in artistas %}
         <tr>
             <td>{{ar.nome}}</td>
             <td>{{ar.genero}}</td>
+            <td><a href="/album/edita/{{ar.id}}">Editar</a></td>
+            <td><a href="/album/remove/{{ar.id}}">Remover</a></td>
         </tr>
         {% endfor %}
     </table>

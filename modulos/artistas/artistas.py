@@ -29,11 +29,11 @@ def save():
         return redirect('/artistas/add')
     
 
-@bp_artista.route("/artista/remove/<int:artista_id>")
-def artista_remove(artista_id):
-    artista = Artistas.query.get(artista_id)
-    if artista:
-        db.session.delete(artista)
+@bp_artista.route("/remove/<int:id>")
+def remove(id):
+    dados = Artistas.query.get(id)
+    if id > 0:
+        db.session.delete(dados)
         db.session.commit()
         flash('Artista removido com sucesso!')
         return redirect("/artistas")
@@ -41,20 +41,18 @@ def artista_remove(artista_id):
         flash("Caminho incorreto!")
         return redirect("/artistas")
 
-
-@bp_artista.route("/artista/edita/<int:artista_id>")
-def artista_edita(artista_id):
-    artista = Artistas.query.get(artista_id)
+@bp_artista.route("/edita/<int:id>")
+def edita(id):
+    artista = Artistas.query.get(id)
     return render_template("artista_edita.html", dados=artista)
 
-
-@bp_artista.route("/artista/editasave", methods=['POST'])
-def artista_editasave():
-    artista_id = request.form.get('artista_id')
+@bp_artista.route("/editasave", methods=['POST'])
+def editasave():
+    id = request.form.get('id')
     nome = request.form.get('nome')
     genero = request.form.get('genero')
-    if artista_id and nome and genero:
-        album = Artistas.query.get(artista_id)
+    if id and nome and genero:
+        album = Artistas.query.get(id)
         album.nome = nome
         album.genero = genero
         db.session.commit()

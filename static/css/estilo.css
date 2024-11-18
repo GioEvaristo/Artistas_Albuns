@@ -1,30 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Englebert&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&display=swap');
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     outline: 0;
-    font-family: 'Englebert';
+    font-family: 'Carrois Gothic SC';
 }
 
 :root{
-    --primary: #af1d1d;
-    --secondary: #5ad3d3;
+    --primary: #6e4c4a;
+    --secondary: #fdd0fd;
     --gray: rgb(217, 208, 208);
     --white: white;
-    --blue: #305ffa;
-    --green: #26932f;
+    --pink: #fda2c1;
+    --black: #000000;
 }
 
 header{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 5rem;
+    height: 6rem;
     background-color: var(--primary);
-    background-image: url(/static/img/notas.gif);
-    
 }
 
 header img{
@@ -37,13 +35,12 @@ header h1{
     margin: 0.5rem;
     font-family: 'Mountains of Christmas';
     text-shadow: -2px 1px black;
-    
 }
 
 h1.inicio{
     display: flex;
     font-size: 6rem;
-    color: var(--blue) ;
+    color: var(--black) ;
     font-family: 'Mountains of Christmas';
     text-shadow: 5px 3px rgb(255, 255, 255);
     justify-content: center;
@@ -59,7 +56,7 @@ nav div{
     background-image: radial-gradient(var(--secondary), black);
     justify-content: space-around;
     align-items: center;
-    text-shadow: -1px 1px black;
+    text-shadow: -1px 1px rgb(255, 255, 255);
 }
 
 nav div a{
@@ -67,27 +64,38 @@ nav div a{
     font-size: 2.5rem;
     text-decoration: none;
     align-items: center;
-    margin: 2rem;
+    justify-content: center;
     color: var(--gray);
 }
 
-
 main {
-    min-height: calc(100vh - 11rem);
-    background-color: var(--green);
-    
+    min-height: calc(100vh - 12rem);
+    background-color: var(--pink);
+    background-image: url(/static/img/starss.gif);
+    background-repeat: no-repeat;
+    background-position: center; 
 }
 
 a, input{
     display: flex;
     justify-content: center;
-    font-size: 2rem;
+    padding: 2rem;
+    font-size: 2.5rem;
     text-decoration: none;
-    color: rgb(255, 0, 0);
+    color: var(--primary);
+}
+
+div.add{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    font-size: 2.5rem;
+    text-decoration: overline;
+    color: var(--primary);
 }
 
 table, tr, td, th{
-    border: 3px solid var(--white);
+    border: 4px solid var(--white);
     border-collapse: collapse;
     background-color: var(--secondary);
     font-size: 2rem;
@@ -95,19 +103,19 @@ table, tr, td, th{
     text-decoration: none;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 5rem;
+    margin-top: 1rem;
 }
 
 form{
-    padding-top: 9rem;
-    border: 3px solid var(--purple);
+    padding-top: 1rem;
+    border: 3px solid var(--primary);
     border-collapse: collapse;
     background-image: radial-gradient(#ff8ecc, rgba(0, 0, 0, 0.164) );
-    font-size: 3rem;
+    font-size: 2rem;
     text-decoration: none;
     padding: 1rem;
     width: 30rem;
-    height: 27rem;
+    height: 25rem;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -117,57 +125,26 @@ form{
 
 button{
     margin-top: 1rem;
-    margin-left: 20rem;
-    height: 5rem;
-    width: 7rem;
+    margin-left: 23rem;
+    height: 3rem;
+    width: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--purple);
-    color: azure;
+    background-color: var(--secondary);
+    color: var(--black);
     cursor: pointer;
     border: 2px solid var(--gray);
     border-radius: 10rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 input{
     font-size: 2rem;
-    height: 3rem;
+    height: 2rem;
     width: 28rem;
-    background-color: var(--primary);
-    border: 3px solid var(--purple);
-}
-
-.add{
-    padding-top: 2rem;
-    margin-bottom: 2rem;
-    text-decoration: overline;
-    color: var(--purple);
-}
-
-.message{
-    display: flex;
-    padding-top: 2rem;
-    justify-content: center;
-    align-items: center;
-    color: var(--secondary);
-    font-size: 3rem;
-    
-}
-
-.titulos{
-    color: rgb(253, 225, 255);
-}
-
-div.index{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: xx-large;
-    color: var(--secondary);
-    padding-top: 12rem;
-
+    background-color: var(--secondary);
+    border: 3px solid var(--primary);
 }
 
 footer{
@@ -179,5 +156,4 @@ footer{
     background-image: radial-gradient(var(--secondary), black);
     justify-content: end;
     color: var(--white);
-    
 }
