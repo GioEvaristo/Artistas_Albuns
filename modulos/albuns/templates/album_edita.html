@@ -21,11 +21,11 @@
 
         <label for="artista_id">Artista: </label>
             <select id="artista_id" name="artista_id" required>
-                {% for ar in artista %}
+                {% for ar in artistas %}
                     {% if ar.id == dados.artista_id %}
-                    <option value="{{a.id}}" selected >{{a.nome}}</option>
+                    <option value="{{ar.id}}" selected >{{ar.nome}}</option>
                     {% else %}
-                    <option value="{{a.id}}" >{{a.nome}}</option>
+                    <option value="{{ar.id}}" >{{ar.nome}}</option>
                     {% endif %}
                 {% endfor %}
             </select>
