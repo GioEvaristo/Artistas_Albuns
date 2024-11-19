@@ -9,23 +9,23 @@
             </div>
         {% endfor %}
     {% endif %}
-    <form action="/albuns/editasave" method="post">
+    <form class="album" action="/albuns/editasave" method="post">
         <fieldset>
-        <input type="hidden" name="id", value="{{a.id}}">
+        <input type="hidden" name="id", value="{{dados.id}}">
 
         <label for="titulo">Título: </label>
-        <input type="text" name="titulo" id="titulo", value="{{a.titulo}}">
+        <input type="text" name="titulo" id="titulo", value="{{dados.titulo}}">
 
         <label for="ano_lancamento">Ano de Lançamento: </label>
-        <input type="number" name="ano_lancamento" id="ano_lancamento", value="{{a.ano_lancamento}}">
+        <input type="number" name="ano_lancamento" id="ano_lancamento", value="{{dados.ano_lancamento}}">
 
         <label for="artista_id">Artista: </label>
             <select id="artista_id" name="artista_id" required>
-                {% for ar in artistas %}
-                    {% if ar.id == dados.artista_id %}
-                    <option value="{{ar.id}}" selected >{{ar.nome}}</option>
+                {% for a in artista %}
+                    {% if a.id == dados.artista_id %}
+                    <option value="{{a.id}}" selected >{{a.nome}}</option>
                     {% else %}
-                    <option value="{{ar.id}}" >{{ar.nome}}</option>
+                    <option value="{{a.id}}" >{{a.nome}}</option>
                     {% endif %}
                 {% endfor %}
             </select>

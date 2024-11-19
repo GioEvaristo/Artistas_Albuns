@@ -11,8 +11,8 @@ def index():
 
 @bp_album.route('/add')
 def add():
-    a = Albuns.query.all()
-    return render_template('album_add.html', albuns = a)
+    a = Artistas.query.all()
+    return render_template('album_add.html', artistas = a)
 
 @bp_album.route('/save', methods = ['POST'])
 def save():
